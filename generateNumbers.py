@@ -20,6 +20,7 @@ a = []
 
 for row in grid:
     temp = 0
+    print(a)
     for element in row:
         if element == 1:
             temp += 1
@@ -27,5 +28,7 @@ for row in grid:
             if temp != 0:
                 a.append(temp)
             temp = 0
+    if temp != 0:
+        a.append(temp)
 
 print(a)
