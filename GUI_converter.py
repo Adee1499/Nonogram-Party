@@ -1,3 +1,8 @@
+"""
+Copyright (C) 2021 Adrian Szarapow - All Rights Reserved
+I retain all rights to the source code and no one may reproduce, distribute, or create derivative works from this work.
+"""
+
 import pprint
 import os
 from tkinter import *
