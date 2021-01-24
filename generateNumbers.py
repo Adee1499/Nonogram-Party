@@ -16,19 +16,26 @@ width = len(grid[0])
 
 print("This nonogram is " + str(height) + "X" + str(width))
 
-a = []
+horizontal = [[] for j in range(height)]
+vertical = [[] for j in range(width)]
 
-for row in grid:
-    temp = 0
-    print(a)
-    for element in row:
-        if element == 1:
-            temp += 1
-        elif element == 0:
-            if temp != 0:
-                a.append(temp)
-            temp = 0
-    if temp != 0:
-        a.append(temp)
+def generate(a, input):
+    rowindex = -1
+    for row in input:
+        rowindex += 1
+        temp = 0
+        for element in row:
+            if element == 1:
+                temp += 1
+            elif element == 0:
+                if temp != 0:
+                    a[rowindex].append(temp)
+                temp = 0
+        if temp != 0:
+            a[rowindex].append(temp)
+    return a
 
-print(a)
+rotatedGrid = [[grid[j][i] for j in range(len(grid))] for i in range(len(grid[0])-1,-1,-1)]
+
+pprint.pprint(generate(horizontal, grid))
+pprint.pprint(generate(vertical, rotatedGrid))
