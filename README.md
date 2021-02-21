@@ -1,4 +1,4 @@
-# Nonogram-Party
+# Nonogram Party
 Repository for some Unity assets for the Nonogram Party project as well as Python scripts used in level generation. Nonogram Party is a mobile game currently being developed for Android & iOS
 
 More info to follow
